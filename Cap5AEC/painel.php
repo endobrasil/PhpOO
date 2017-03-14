@@ -7,7 +7,7 @@ function __autoload($classe){
 	}
 }
 
-$painel = new TPanel(400,300);
+$painel = new TPainel(400,300);
 $texto=new TParagraph('isso é um teste, x:10,y:10');
 $painel->put($texto,10,10);
 
