@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>janelinhas</title>
+	<style type="text/css" media='screen'>
+	.table_style{
+		font-family: Arial,Verdana,Sans-serif;
+		font-size: 10pt;
+		border-collapse: collapse;
+	}
+
+	.panel_style1{
+		position: absolute;
+		left: 20px;
+		top:20px;
+		width: 200px;
+		height: 200px;
+		z-index: 10000;
+	}
+
+	.panel_style2{
+		position: absolute;
+		left: 100px;
+		top: 80px;
+		width: 200px;
+		height: 200px;
+		z-index: 10000;
+	}
+	</style>
+</head>
+<body>
+<div id="panel1" class="panel_style1">
+	<table bgcolor="#e0e0e0" width="100%" border="1" height="100%" class="table_style">
+		<tr bgcolor="#707070" height="20px">
+			<td width="100%"><font color=white><b>Janela1</b></font></td>
+			<td align="center" valign="middle">
+				<a href="#" onclick="document.getElementById('panel2').style.display='none'">
+					<img src="../app.img/porco.png" height="20px" width="20px" border="0">
+				</a>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td colspan="2"><p align="left">Conteúdo da janela 1</p></td>
+		</tr>		
+	</table>	
+</div>
+
+<div id="panel2" class="panel_style2">
+	<table bgcolor="#896745" width="100%" border="1" height="100%" class="table_style">
+		<tr bgcolor="#452310" height="20px">
+			<td width="100%"><font color="red"><b>Janela2</b></font></td>
+			<td align="center" valign="middle">
+				<a href="#" onclick="document.getElementById('panel1').style.display='none'">
+					<img src="../app.img/esquilo.png" height="20px" width="20px" border="0">
+				</a>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td colspan="2"><img src="../app.img/dragao.png" height="20px" width="20px" border="0"></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
