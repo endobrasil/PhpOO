@@ -1,1 +1,3 @@
 # PhpOO
+Arquivos código de estudo do livro Php com Orientação a Objetos
+Somente para eu parar de perder-los no pen-driver....
