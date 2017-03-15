@@ -39,7 +39,7 @@ $itens = array();
 $itens['1']='Porto Alegre';
 $itens['2']='Lajeado';
 $itens['3']='Fortaleza';
-//$cidade->addItems($itens);
+//$cidade->addItens($itens);
 
 $codigo->setSize(70);
 $nome->setSize(140);
@@ -49,7 +49,7 @@ $telefone->setSize(140);
 
 $lblCodigo=new TLabel('Código');
 $lblNome=new TLabel('Nome');
-//$lblCidade=new TLabel('Cidade');
+$lblCidade=new TLabel('Cidade');
 $lblEndereco=new TLabel('Endereço');
 $lblTelefone=new TLabel('Telefone');
 
@@ -61,8 +61,8 @@ $row=$table1->addRow();
 $row->addCell($lblNome);
 $row->addCell($nome);
 
-//$row=$table1->addRow();
-//$row->addCell($lblCidade);
+$row=$table1->addRow();
+$row->addCell($lblCidade);
 //$row->addCell($cidade);
 
 $row=$table2->addRow();
