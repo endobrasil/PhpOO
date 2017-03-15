@@ -3,7 +3,7 @@
 * classe TField
 * classe base para construção dos widgets para formulário
 */
-abstract class TField{
+abstract class TFild{
 	protected $name;
 	protected $fild;
 	protected $value;
