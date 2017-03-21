@@ -3,7 +3,7 @@
  * class TFile
  * classe para a construção de campos de digitação de senhas 
  */
- class TFile extends TFild{
+ class TFile extends TField{
  	/**
  	 * método show()
  	 * exibe o widget na tela

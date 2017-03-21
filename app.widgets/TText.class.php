@@ -3,7 +3,7 @@
  * class TText
  * classe para a construção de campos de digitação de senhas 
  */
- class TText extends TFild{
+ class TText extends TField{
  	private $width;
  	private $height;
  	

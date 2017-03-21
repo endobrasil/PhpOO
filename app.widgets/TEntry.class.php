@@ -3,7 +3,7 @@
 *	classe TEntry
 *	caixa para a construção de caixas de texto
 */
-class TEntry extends TFild{
+class TEntry extends TField{
 	/**
 	*	método show()
 	*	exibe o widget na tela

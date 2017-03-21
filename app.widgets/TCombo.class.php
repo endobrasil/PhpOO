@@ -3,7 +3,7 @@
  * class TCombo
  * classe para a construção de campos de digitação de senhas 
  */
- class TCombo extends TFild{
+ class TCombo extends TField{
  	private $itens; 	
  	
  	/**
@@ -19,16 +19,16 @@
  		$this->tag=new TElement('select');
  		$this->tag->class='tfield';	//class css 		
  	}
- 	
+	
  	/**
  	 * método addItens()
  	 * adiciona intens a combo box
  	 * @param $itens = array de itens  	 
  	 */
  	public function addItens($itens){
- 		$this->itens=$itens
+ 		$this->itens=$itens;
  	}
- 	
+	
  	/**
  	 * método show()
  	 * exibe o widget na tela
@@ -73,5 +73,5 @@
 		//exibe a tag
 		$this->tag->show();
  	}
- }
+}
 ?> 

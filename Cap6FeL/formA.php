@@ -34,18 +34,18 @@ $codigo = new TEntry('codigo');
 $nome = new TEntry('nome');
 $endereco = new TEntry('endereco');
 $telefone = new TEntry('telefone');
-//$cidade = new TCombo('cidade');
+$cidade = new TCombo('cidade');
 $itens = array();
 $itens['1']='Porto Alegre';
 $itens['2']='Lajeado';
 $itens['3']='Fortaleza';
-//$cidade->addItens($itens);
+$cidade->addItens($itens);
 
 $codigo->setSize(70);
 $nome->setSize(140);
 $endereco->setSize(140);
 $telefone->setSize(140);
-//$cidade->setSize(140);
+$cidade->setSize(140);
 
 $lblCodigo=new TLabel('Código');
 $lblNome=new TLabel('Nome');
@@ -63,7 +63,7 @@ $row->addCell($nome);
 
 $row=$table1->addRow();
 $row->addCell($lblCidade);
-//$row->addCell($cidade);
+$row->addCell($cidade);
 
 $row=$table2->addRow();
 $row->addCell($lblEndereco);

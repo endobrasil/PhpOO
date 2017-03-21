@@ -3,7 +3,7 @@
 *	classe TLabel
 *	classe para construção de rótulos de textos
 */
-class TLabel extends TFild{
+class TLabel extends TField{
 	private $fontSize;	// tamanho da fonte
 	private $fonteFace;	// nome da fonte
 	private $fonteColor;// cor da fonte

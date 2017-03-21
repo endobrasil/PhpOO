@@ -3,7 +3,7 @@
  * class THidden
  * classe para a construção de campos de digitação de senhas 
  */
- class THidden extends TFild{
+ class THidden extends TField{
  	/**
  	 * método show()
  	 * exibe o widget na tela
