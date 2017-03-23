@@ -51,6 +51,8 @@
 			$this->tag->readonly="1";
 			$this->tag->class='tfield_disabled';//class CSS
 		}
+
+		$this->tag->add(htmlspecialchars($this->value));
 		
 		//exibe a tag
 		$this->tag->show();

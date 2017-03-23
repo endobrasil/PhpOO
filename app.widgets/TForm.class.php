@@ -43,11 +43,11 @@ class TForm{
 	* define quais são os campos do formulario
 	* @param $fields = array deobjetos TFilds
 	*/
-	public function setFilds($filds){
+	public function setFields($fields){
 		foreach ($fields as $field) {
-			if($field instanceof TFild){
-				$name=$fild->getName();
-				$this->fields[$name]=$fild;
+			if($field instanceof TField){
+				$name=$field->getName();
+				$this->fields[$name]=$field;
 
 				if($field instanceof TButton){
 					$field->setFormName($this->name);
