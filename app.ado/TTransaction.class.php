@@ -20,7 +20,7 @@ final class TTransaction{
 		if(empty(self::$conn)){
 			//ver o que o self ta bugando aki...
 			//self::$conn=TConnection::open($database);
-			$conn = new PDO('mysql:host=localhost;port=3306;dbname=livro','root','');
+			$conn = new PDO('mysql:host=localhost;port=3306;dbname=cursos','root','Ab123456');
 			//inicia a transação
 			//self::$conn->beginTransaction();
 		}

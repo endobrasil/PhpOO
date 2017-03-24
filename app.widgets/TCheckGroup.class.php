@@ -32,7 +32,7 @@
  		if($this->itens){
  			//percorre cada uma das opções do rádio
  			foreach ($this->itens as $index=>$label){
- 				$button = new TCHeckButton("{$this->name}[]");
+ 				$button = new TCheckButton("{$this->name}[]");
  				$button->setValue($index);
  				
  				//verefica se deve ser marcado
