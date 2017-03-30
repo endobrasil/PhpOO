@@ -3,7 +3,7 @@ class Produto{
 	private $data;
 
 	function conecta(){
-		$conn = new PDO('mysql:host=localhost;port=3306;dbname=test','root','');
+		$conn = new PDO('mysql:host=localhost;port=3306;dbname=cursos,root,');
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 		return $conn;
 	}
@@ -17,8 +17,8 @@ class Produto{
 	}
 
 	function insert(){
-		$sql = "INSERT INTO produtos(descricao, estoque, preco_custo)".
-				"VALUES ('{$this->descricao}', {$this->estoque}, {$this->preco_custo})";
+		$sql = "INSERT INTO produtos(id, descricao, estoque, preco_custo)".
+				"VALUES ('{$this->id}','{$this->descricao}', {$this->estoque}, {$this->preco_custo})";
 
 		$conn= $this->conecta();
 

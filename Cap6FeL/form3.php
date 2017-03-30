@@ -101,7 +101,7 @@ function onSave(){
 	$pessoa = $form->getData('Pessoa');
 	try{
 		TTransaction::open('my_livro');
-
+		TTransaction::setLogger(new TLoggerTXT('../log/log_cap6-03.txt'));
 		$pessoa->linguas=implode(' ', $pessoa->linguas);
 		$pessoa->datanasc= conv_data_to_us($pessoa->datanasc);
 		$pessoa->store();
