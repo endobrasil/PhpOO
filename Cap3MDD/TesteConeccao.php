@@ -7,14 +7,32 @@ function __autoload($classe){
 	}
 }
 $sql = new TSqlSelect;
-$sql->setEntity('famoso');
+$sql->setEntity('famosos');
 $sql->addColumn('codigo');
 $sql->addColumn('nome');
 
 $criteria = new TCriteria;
-$criteria->add(new TFilter('codigo', '=', 15));
+$criteria->add(new TFilter('codigo', '=', 10));
 $sql->setCriteria($criteria);
 echo $sql->getInstrution()."<hr>";
+try
+{
+	$conn=TConnection::open('my_livro');
+	$result=$conn->query($sql->getInstrution());
+	
+	if($result)
+	{
+		$row=$result->fetch(PDO::FETCH_ASSOC);
+		echo $row['codigo'].' - '.$row['nome']."<br>\n";		
+	}
+	$conn=null;
+}
+catch(PDOException $e)
+{
+	print "Erro!:".$e->getMessage()."<br>\n";
+	die();
+}
+
 try
 {
 	$conn=TConnection::open('my_livro');

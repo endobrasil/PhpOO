@@ -4,6 +4,7 @@
 * essa classe preve os métodos necessários para manipular transações
 */
 final class TTransaction{
+	private static $conn;	//conexão ativa
 	/*
 	* método __construct()
 	* está marcado como private para impedirque se crie instâncias de TTransaction
@@ -19,10 +20,10 @@ final class TTransaction{
 		//abre uma conexão e armazena na propriedade estática $conn
 		if(empty(self::$conn)){
 			//ver o que o self ta bugando aki...
-			//self::$conn=TConnection::open($database);
-			$conn = new PDO('mysql:host=localhost;port=3306;dbname=cursos','root','Ab123456');
+			self::$conn=TConnection::open($database);
+			//$conn = new PDO('mysql:host=localhost;port=3306;dbname=cursos','root','Ab123456');
 			//inicia a transação
-			//self::$conn->beginTransaction();
+			self::$conn->beginTransaction();
 		}
 	}
 
@@ -42,7 +43,7 @@ final class TTransaction{
 	public static function rollback(){
 		if(self::$conn){
 			//desfaz as operações realizadas na transação
-			self:$conn->rollback();
+			self::$conn->rollback();
 			self::$conn=NULL;
 		}
 	}

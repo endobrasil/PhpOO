@@ -19,6 +19,7 @@ final class TConnection{
 	public static function open($name){
 		//verefica se existe o arquivo de configuração para este banco de dados
 		if(file_exists("../app.config/{$name}.ini")){
+
 			//lê o INI e retorna um array
 			$db=parse_ini_file("../app.config/{$name}.ini");
 		}else{
