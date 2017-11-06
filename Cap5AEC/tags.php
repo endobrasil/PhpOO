@@ -1,5 +1,5 @@
 <?php
-include_once "../app.widgets/TElement.class.php";
+include_once "../app/widgets/TElement.class.php";
 
 $html=new TElement('html');
 $head=new TElement('head');
@@ -20,7 +20,7 @@ $p->add('O homem da vida dela é quem ela escolher.');
 $center->add($p);
 
 $img=new TElement('img');
-$img->src='../app.img/dancarina.png';
+$img->src='../app/img/dancarina.png';
 $img->width='120';
 $img->height='120';
 $center->add($img);

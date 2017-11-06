@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
 
@@ -31,12 +31,12 @@ try{
 	TTransaction::log("** Obtendo alunos **");
 	echo "<h1>** Obtendo alunos **</h1>\n";
 
-	$daline = new Aluno(1);
+	$daline = new Aluno(14);
 	echo "Nome: {$daline->nome} <br>\n";
 	echo "Endereço: {$daline->endereco} <br>\n";
 	
 
-	$daline = new Aluno(2);
+	$daline = new Aluno(12);
 	echo "Nome: {$daline->nome} <br>\n";
 	echo "Endereço: {$daline->endereco} <br>\n";
 

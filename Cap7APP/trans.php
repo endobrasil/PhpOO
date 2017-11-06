@@ -1,14 +1,14 @@
 <?php
-	include_once '../app/ado/TTransalation.class.php';
+	include_once '../app/ado/TTranslation.class.php';
 
-	TTransalation::setLanguage('pt');
+	TTranslation::setLanguagem('pt');
 	echo "Em português";
 
 	echo _t('Function')."<br>\n";
 	echo _t('Table')."<br>\n";
 	echo _t('Tool')."<br>\n";
 
-	TTransalation::setLanguage('it');
+	TTranslation::setLanguagem('it');
 	echo "Em Italiano";
 
 	echo _t('Function')."<br>\n";

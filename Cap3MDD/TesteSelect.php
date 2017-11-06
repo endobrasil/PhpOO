@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
 $criteria = new TCriteria;
@@ -19,7 +19,7 @@ $sql->setEntity('aluno');
 $sql->addColumn('nome');
 $sql->addColumn('fone');
 $sql->setCriteria($criteria);
-echo $sql->getInstrution();
+echo $sql->getInstruction();
 echo "<br><br><br>\n";
 
 $criteria1=new TCriteria;
@@ -40,7 +40,7 @@ $sql = new TSqlSelect;
 $sql->setEntity('aluno');
 $sql->addColumn('*');
 $sql->setCriteria($criteria);
-echo $sql->getInstrution();
+echo $sql->getInstruction();
 echo "<br><br><br>\n";
 
 

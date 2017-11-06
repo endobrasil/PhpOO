@@ -1,6 +1,6 @@
 <?php
 function __autoload($classe){
-	$pastas = array('app.widgets', 'app.ado');
+	$pastas = array('app/widgets', 'app/ado');
 	foreach ($pastas as $pasta) {
 		if(file_exists("../{$pasta}/{$classe}.class.php")){
 			include_once "../{$pasta}/{$classe}.class.php";
@@ -8,6 +8,10 @@ function __autoload($classe){
 		}	
 	}
 }
+
+###   ERRO!!! Implementar a porra do dattagrid quenão tem no livro...
+
+
 
 class Pessoa extends TRecord{
 	const TABLENAME = 'pessoa';
@@ -34,12 +38,12 @@ class PessoasList extends TPage{
 		$action1=new TDataGridAction(array($this,'onDelete'));
 		$action1->setLabel('Deletar');
 		$action1->setImage('../app.img/carro.png');
-		$action1->setFiel('id');
+		$action1->setField('id');
 
-		$action1=new TDataGridAction(array($this,'onView'));
-		$action1->setLabel('Visualizar');
-		$action1->setImage('../app.img/cobra.png');
-		$action1->setFiel('id');
+		$action2=new TDataGridAction(array($this,'onView'));
+		$action2->setLabel('Visualizar');
+		$action2->setImage('../app/img/cobra.png');
+		$action2->setField('id');
 
 		$this->datagrid->addAction($action1);
 		$this->datagrid->addAction($action2);
@@ -108,11 +112,13 @@ class PessoasList extends TPage{
 
 	function show(){
 		if(!$this->loaded){
-			$this->onReload()
+			$this->onReload();
 		}
 		parent::show();
 	}
 }
+
 $page = new PessoasList;
 $page->show();
+
 ?>

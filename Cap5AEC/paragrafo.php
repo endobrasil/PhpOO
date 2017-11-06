@@ -1,6 +1,6 @@
 <?php
-include_once "../app.widgets/TElement.class.php";
-include_once "../app.widgets/TParagraph.class.php";
+include_once "../app/widgets/TElement.class.php";
+include_once "../app/widgets/TParagraph.class.php";
 
 $text1=new TParagraph('teste1<b>test1</b>teste1');
 $text1->set_aling('left');

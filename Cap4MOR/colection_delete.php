@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
 

@@ -1,11 +1,12 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
+
 
 class Aluno extends TRecord{
 	const TABLENAME = 'Aluno';
@@ -30,7 +31,7 @@ try{
 	TTransaction::log("** Obtendo alunos **");
 	echo "<h1>** Obtendo aluno 1 **</h1>\n";
 
-	$daline = new Aluno(1);
+	$daline = new Aluno(11);
 	if($daline){
 		echo "Telefone atual da aluna {$daline->nome}: {$daline->telefone} <br>\n";
 		$daline->telefone='(51) 1111-3333';

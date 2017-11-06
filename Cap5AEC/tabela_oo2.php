@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.widgets/{$classe}.class.php"))
+	if(file_exists("../app/widgets/{$classe}.class.php"))
 	{
-		include_once "../app.widgets/{$classe}.class.php";
-		echo "include_once ../app.widgets/{$classe}.class.php<br>\n";
+		include_once "../app/widgets/{$classe}.class.php";
+		echo "include_once ../app/widgets/{$classe}.class.php<br>\n";
 	}
 }
 
@@ -57,7 +57,7 @@ $paragrafo=new TParagraph("este é o logo do Dragão!!!");
 $paragrafo->set_aling('left');
 $linha->addCell($paragrafo);
 
-$imagem=new TImage('../app.img/dragao.png');
+$imagem=new TImage('../app/img/dragao.png');
 $imagem->height=120;
 $imagem->weight=120;
 $linha->addCell($imagem);
@@ -67,7 +67,7 @@ $paragrafo=new TParagraph("este é o logo do Tigre!!!");
 $paragrafo->set_aling('left');
 $linha->addCell($paragrafo);
 
-$imagem=new TImage('../app.img/tigre.png');
+$imagem=new TImage('../app/img/tigre.png');
 $imagem->height=120;
 $imagem->weight=120;
 $linha->addCell($imagem);
@@ -77,7 +77,7 @@ $paragrafo=new TParagraph("este é o logo do Verminho!!!");
 $paragrafo->set_aling('left');
 $linha->addCell($paragrafo);
 
-$imagem=new TImage('../app.img/verme.png');
+$imagem=new TImage('../app/img/verme.png');
 $imagem->height=120;
 $imagem->weight=120;
 $linha->addCell($imagem);

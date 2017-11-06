@@ -1,8 +1,8 @@
 <?php
-include_once "../app.widgets/TElement.class.php";
-include_once "../app.widgets/TTable.class.php";
-include_once "../app.widgets/TTableRow.class.php";
-include_once "../app.widgets/TTableCell.class.php";
+include_once "../app/widgets/TElement.class.php";
+include_once "../app/widgets/TTable.class.php";
+include_once "../app/widgets/TTableRow.class.php";
+include_once "../app/widgets/TTableCell.class.php";
 
 
 $dados[]=array( 3 , 'Daline Dall Oglio' , 'Rua da ConceiÃ§Ã£o'  , '(51) 1111-2222'   , 'Cruzeiro do Sul');

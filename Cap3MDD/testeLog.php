@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
 ?>
@@ -16,13 +16,13 @@ function __autoload($classe){
 <?php
 try{
 	setlocale(LC_NUMERIC, 'POSIX');
-	TTransaction::open('my_curso');
+	TTransaction::open('my_livro');
 	TTransaction::setLogger(new TLoggerHTML('../log/log_03.html'));
 	TTransaction::log("Inserindo registro do André Wendel");
 
 	$sql = new TSqlInsert;
-	$sql->setEntity('famosos');
-	$sql->setRowData('codigo',9);
+	$sql->setEntity('famoso');
+	$sql->setRowData('codigo',10);
 	$sql->setRowData('nome','André Wendel');
 	$conn=TTransaction::get();
 	$result=$conn->Query($sql->getInstruction());

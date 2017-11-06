@@ -1,27 +1,17 @@
 <?php
 //faz a conexão
 
-	$conn = new PDO('mysql:host=localhost;port=3306;dbname=livros','root','Ab123456');
+	$conn = new PDO('mysql:host=localhost;port=3306;dbname=livro','root','');
 
 
-/*
+
 for($i=18; $i<30;$i++){
-	$conn->exec("insert into famosos values({$i},'famoso {$i}')");
-		echo "insert into famosos values({$i},'famoso {$i}')<br>";
+	$conn->exec("insert into famoso values({$i},'famoso {$i}')");
+		echo "insert into famoso values({$i},'famoso {$i}')<br>\n";
 }
-*/
-	
-	if($result)
-	{
-		$row=$result->fetch(PDO::FETCH_ASSOC);
-		echo $row['codigo'].' - '.$row['nome']."<br>\n";
-	}else
-	{
-		echo "cunhou";
-	}
-	
-	
-	
+
+
+
 $conn=null;
 
 ?>

@@ -1,0 +1,25 @@
+<?php
+/**
+* classe TTable
+* classe para exibição de tabelas
+*/
+class TTable extends TElement{
+	/**
+	* método construtor
+	* instancia uma nova tabela
+	*/
+	public function __construct(){
+		parent::__construct('table');
+	}
+
+	/**
+	* método addRow()
+	* agrega um novo objeto linha (TTableRow) na tabela
+	*/
+	public function addRow(){
+		$row = new TTableRow;
+		parent::add($row);
+		return $row;
+	}
+}
+?>

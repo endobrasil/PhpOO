@@ -1,9 +1,9 @@
 <?php
 function __autoload($classe){
-	if(file_exists("../app.ado/{$classe}.class.php"))
+	if(file_exists("../app/ado/{$classe}.class.php"))
 	{
-		include_once "../app.ado/{$classe}.class.php";
-		echo "include_once ../app.ado/{$classe}.class.php<br>\n";
+		include_once "../app/ado/{$classe}.class.php";
+		echo "include_once ../app/ado/{$classe}.class.php<br>\n";
 	}
 }
 
@@ -28,14 +28,14 @@ try{
 	TTransaction::setLogger(new TLoggerHTML('../log/log_cap4-04.html'));
 
 	$daline = new Aluno;
-	$daline->nome='Fábio Locatelli';
+	$daline->nome='Fábio Locatelli #BOSTA';
 	$daline->endereco='Rua Merlin';
 	$daline->telefone='(51) 9 2222-1111';
 	$daline->cidade='Largeiro';
 
 	$julia = clone $daline;
 
-	$julia->nome='Júlia Locatelli';
+	$julia->nome='Júlia Locatelli #FEZES';
 
 	TTransaction::log("*** Persistindo \$daline ***");
 	$daline->store();

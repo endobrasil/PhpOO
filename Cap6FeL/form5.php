@@ -1,6 +1,6 @@
 <?php
 function __autoload($classe){
-	$pastas = array('app.widgets', 'app.ado');
+	$pastas = array('app/widgets', 'app/ado');
 	foreach ($pastas as $pasta) {
 		if(file_exists("../{$pasta}/{$classe}.class.php")){
 			include_once "../{$pasta}/{$classe}.class.php";
@@ -8,6 +8,8 @@ function __autoload($classe){
 		}	
 	}
 }
+
+###   ERRO!!! Implementar a porra do dattagrid quenão tem no livro...
 
 class Pessoa extends TRecord{
 	const TABLENAME = 'pessoa';
@@ -32,8 +34,8 @@ class PessoasList extends TPage{
 		$action2 = new TAction(array($this,'onReload'));
 		$action1->setParameter('order','nome');
 
-		$codigo->setAction($action1);
-		$nome->setAction($action2)
+		$codigo->setAction($action1);	
+		$nome->setAction($action2);
 
 		$this->datagrid->addColumn($codigo);
 		$this->datagrid->addColumn($nome);
@@ -67,7 +69,7 @@ class PessoasList extends TPage{
 	
 	function show(){
 		if(!$this->loaded){
-			$this->onReload()
+			$this->onReload();
 		}
 		parent::show();
 	}
